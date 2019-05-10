@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=gb2312"%>
 <jsp:useBean id="loginBean" class="mybean.data.Login" scope="session" />
-<html><head><%@ include file="index.html"%></head>
+<html><head><%@ include file="head.txt"%></head>
 <title>»¶Ó­µÇÂ½</title>
 <body background="image/welcome.jpg"><font size="2">
 <div align="center">
