@@ -1,0 +1,111 @@
+body{
+	 padding:0px;
+	 margin:0px; 
+	 font-size:12px
+	 }
+a{ 
+      color:#333;text-decoration:none;
+	  }
+#banner a:hover{
+	color:#FC0;	
+}
+a:hover{ 
+      color:#F00;
+	  }
+.logo{ 
+      font-size:44px; font-weight:bold; color:#000;
+	  }
+.logo2{
+	 font-size:30px; font-weight:bold; color:#666;
+	 }
+.cd{
+	 font-size:14px; color:#FFF;
+	 }
+.cd a{
+	 text-decoration:none;color:#FFF;
+	 }
+.cd a:hover{ 
+     text-decoration:none;color:#FFF;
+     }
+.hs{
+	color:#666; font-size:12px;
+	}
+.bt{
+	 background:#EFEFEF; 
+	 color:#000; font-size:14px; 
+	 font-weight:bold; 
+	 text-indent:20px;
+	 }
+.gd{
+	 line-height:22px; 
+	 }
+.jw{
+	background:#ff7800;
+    color:#000; font-size:14px; 
+	text-align:center; 
+	color:#FFF
+	}
+.lm td{
+	 border-bottom: #CCC 1px dashed; 
+	 font-size:14px; 
+	 font-weight:bold; 
+	 text-align:center;
+	 }
+.lm td a{ color:#333; 
+          text-decoration:none;
+		  }
+.lm td a:hover{
+	 color:#f00; 
+	 text-decoration:none;
+	 }
+.js{
+	 line-height:30px; 
+	 padding:10px;
+	 }
+.news td{
+	 border-bottom: #CCC 1px dashed; 
+	 font-size:12px;
+	 }
+.news td a{
+	 color:#333; 
+	 text-decoration:none;
+	 }
+.news  td a:hover{
+	 color:#f00; 
+	 text-decoration:none;
+	 }
+.main{
+	width:525px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+.hr_1 {
+	font-size: 14px;
+	font-weight: bold;
+	color:#F60;
+	height: 35px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #F66;
+	vertical-align:bottom;
+	padding-left:12px;}
+.left{
+	text-align:right;
+	width:80px;
+	height:25px;
+	padding-right:5px;}
+	
+.center{width:135px;}
+.inputClass{
+	width:130px;
+	height:16px;
+	border:solid 1px #F60;}
+.hehe{
+	margin-top:-80px;
+}
+.ss{
+	
+	bottom:30px;
+	right:20px;
+	position:absolute;
+}

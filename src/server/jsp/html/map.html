@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pet shop Map</title>
+</head>
+
+<body>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>狗狗天地</title>
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+
+       function $(id){
+		  return document.getElementById(id);
+	  }
+	  function checkUser(){
+		  var user=$("user").value;
+		  var userReg=/^[a-zA-Z][a-zA-Z0-9]{3,15}$/;
+		  if(userReg.test(user)==false){
+			   $("user_prompt").innerHTML="用户名不合要求";
+			   return false;
+		  }
+		  $("user_prompt").innerHTML="";
+		  return true;
+		  
+	  }
+	  function checkPwd(){
+		  var pwd=$("pwd").value;
+		   var pwdReg=/^[a-zA-Z0-9]{4,10}$/;
+		   if(pwdReg.test(pwd)==false){
+			     $("pwd_prompt").innerHTML="密码不合要求";
+				 return false;
+		   }
+		   $("pwd_prompt").innerHTML="";
+		   return true;  
+	  }
+	  function checkRepwd(){
+		  var repwd=$("repwd").value;
+		  var pwd=$("pwd").value;
+		  if(repwd!=pwd){
+			  $("repwd_prompt").innerHTML="密码不一致";
+			  return false;
+		  }
+		  $("repwd_prompt").innerHTML="";
+		  return true;
+	  }
+       function checkEmail(){
+		   var email=document.getElementById("email").value;
+		   var emailReg=/^\w+@\w+\.[(com)$|(cn)$]/;
+		   if(emailReg.test(email)==false){
+			   $("email_prompt").innerHTML="邮箱不合要求";
+			   return false;
+		   }
+		   $("email_prompt").innerHTML="";
+		   return true;
+	   }
+	   function checkMobile(){
+		   var mobile=$("mobile").value;
+		   var mobileReg=/^1\d{10}$/;
+		   if(mobileReg.test(mobile)==false){
+			   $("mobile_prompt").innerHTML="手机号不合要求";
+			   return false;
+		   }
+		   $("mobile_prompt").innerHTML="";
+		   return true;
+	   }
+	   function checkBirth(){
+		   var birth=$("birth").value;
+		   var birthReg=/^((19\d{2})|(20[0-1][0-4]))-((0?[1-9])|(1[0-2]))-((0?[1-9])|([1-2]\d)|(3[0-1]))$/;
+		   if(birthReg.test(birth)==false){
+			   $("birth_prompt").innerHTML="出生日期格式有误";
+			   return false;
+		   }
+		    $("birth_prompt").innerHTML="";
+			return true;
+	   }
+	    function checkAll(){
+		 checkUser();
+		 checkPwd();
+		 checkRepwd();
+		 checkEmail();
+		 checkMobile();
+		 checkBirth();
+		 if(checkUser() && checkPwd() && checkRepwd() && checkEmail() && checkMobile() && checkBirth()){
+			 return true;
+		 }else{
+		 return false;
+		 }
+		}
+		
+        var picarr=new Array();
+		 picarr[0]="images/banner.jpg";
+		 picarr[1]="images/banner2.jpg";
+		 picarr[2]="images/banner3.jpg"
+		  var i=0;
+		 var time;
+		 function show(){
+			 document.getElementById("haha").src=picarr[i];
+			 if(i<picarr.length-1)
+			   i++;
+			 else
+			    i=0;
+		     time=setTimeout("show()",2000)
+		 }
+		 window.onload=show;
+
+</script>
+</head>
+
+<body>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#F6F6F6">
+  <tr>
+    <td><img src="images/logo.jpg"></td>
+  </tr>
+</table>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0" background="images/tb.png" class="cd">
+  <tr>
+    <td width="15%" height="40" align="center"><a href="index.html">网站首页</a></td>
+    <td width="15%" align="center"><a href="js.html">狗狗介绍</a></td>
+    <td width="15%" align="center"><a href="zp.html">狗狗照片</a></td>
+    <td width="15%" align="center"><a href="zl.html">狗狗种类</a></td>
+    <td width="15%" align="center"><a href="sl.html">狗狗食量</a></td>
+    <td width="15%" align="center"><a href="sy.html">狗狗饲养</a></td>
+    <td width="15%" align="center"><a href="ly.html">加入我们</a></td>
+  </tr>
+</table>
+<table width="979" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="979" height="64"><img src="images/banner.jpg" width="980" id="haha"></td>
+  </tr>
+</table>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+</table>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+</table>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="40" class="bt">网站栏目</td>
+    <td height="40" bgcolor="#FFFFFF">&nbsp;</td>
+    <td height="40" class="bt" ></td>
+  </tr>
+  <tr>
+    <td width="250" height="262" valign="top"><table width="250" border="0" cellspacing="0" cellpadding="0" class="lm">
+      <tr>
+        <td height="40"><a href="js.html">狗狗介绍</a></td>
+      </tr>
+    <tr>
+        <td height="40"><a href="zp.html">狗狗照片</a></td>
+      </tr>
+      <tr>
+        <td height="40"><a href="zl.html">狗狗种类</a></td>
+      </tr>
+      <tr>
+        <td height="40"><a href="sy.html">狗狗饲养</a></td>
+      </tr>
+      <tr>
+        <td height="40"><a href="ly.html">加入我们</a></td>
+      </tr>
+      <tr>
+        <td height="40"><a href="map.html">查看宠物店地图</a></td>
+      </tr>
+   </table></td>
+   <td>
+   <div class="hehe">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="地图" />
+<meta name="description" content="地图" />
+<title>地图</title>
+<!--地图-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+<body>
+  <!--地图-->
+  <div style="width:650px;height:300px;border:#ccc dashed 3px; margin:35px;" id="dituContent"></div>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(87.263924,60.857761);//定义一个中心点坐标
+        map.centerAndZoom(point,3);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"服务中心",content:"武汉市宠物店站点",point:"114.323473|30.533998",isOpen:0,icon:{w:21,h:21,l:46,t:0,x:6,lb:5}}
+		 ,{title:"服务中心",content:"武汉市宠物店站点",point:"114.379815|30.419959",isOpen:0,icon:{w:21,h:21,l:46,t:0,x:6,lb:5}}
+		 ,{title:"服务中心",content:"武汉市宠物店站点",point:"114.260232|30.626027",isOpen:0,icon:{w:21,h:21,l:46,t:0,x:6,lb:5}}
+		 ,{title:"服务中心",content:"武汉市宠物店站点",point:"114.218264|30.775821",isOpen:0,icon:{w:21,h:21,l:46,t:0,x:6,lb:5}}
+		 ];
+		 
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(new BMap.Marker(point));//定点坐标红点覆盖
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+</div>
+    </td>
+    
+   
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+</table>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="67" class="jw"> <p>Copyriight@2006-2016 QIANNIANZHILIANcom, ALL rights reserved.<br />2001-2018,版权所有 狗狗驿站85CP 备 13385453</p></td>
+  </tr>
+</table>
+</body>
+</html>
+
+</html>
