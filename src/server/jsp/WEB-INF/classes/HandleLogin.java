@@ -43,7 +43,7 @@ public void doPost(HttpServletRequest request,HttpServletResponse response)
 			boolean m=rs.next();
 			if(m==true){
 				success(request,response,logname,password);
-				RequestDispatcher dispatcher=request.getRequestDispatcher("login.jsp");
+				RequestDispatcher dispatcher=request.getRequestDispatcher("index.html");
 				dispatcher.forward(request,response);
 			}
 			else{
@@ -57,6 +57,7 @@ public void doPost(HttpServletRequest request,HttpServletResponse response)
 		}
 		con.close();
 	}
+
 	catch(SQLException exp){
 		String backNews=""+exp;
 		fail(request,response,logname,backNews);
@@ -83,6 +84,7 @@ public void doGet(HttpServletRequest request,HttpServletResponse response)
 			}
 			else{
 				loginBean.setBackNews(logname+"µÇÂ½³É¹¦");
+                                
 				loginBean.setLogname(logname);
 			}
 		}
