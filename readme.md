@@ -1,3 +1,3 @@
-<%@ page contentType="text/html;charset=gb2312"%>
+<%@ page contentType="text/html;charset=utf-8"%>
 ##PetShop
-在线宠物商店。
+脭脷脧脽鲁猫脦茂脡脤碌锚隆拢
