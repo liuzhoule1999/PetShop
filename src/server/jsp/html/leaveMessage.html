@@ -1,0 +1,310 @@
+<html>
+<style type="text/css">
+#ll{
+	margin-left:100px;
+	margin-top:10px;}
+li{
+	list-style:none;
+	}
+span:hover{
+	color:#F06;
+	cursor:pointer;
+	}
+a:link{
+	text-decoration:none;
+}
+a:hover{
+	color:#F00;
+	font-family:"微软雅黑";
+	font-size:18px;
+}
+</style>
+<link href="css/css.css" rel="stylesheet" type="text/css">
+      
+
+
+<script type="text/javascript">
+        
+
+       function $(id){
+		  return document.getElementById(id);
+	  }
+	  function checkUser(){
+		  var user=$("user").value;
+		  var userReg=/^[a-zA-Z][a-zA-Z0-9]{3,15}$/;
+		  if(userReg.test(user)==false){
+			   $("user_prompt").innerHTML="用户名不合要求";
+			   return false;
+		  }
+		  $("user_prompt").innerHTML="";
+		  return true;
+		  
+	  }
+	  function checkPwd(){
+		  var pwd=$("pwd").value;
+		   var pwdReg=/^[a-zA-Z0-9]{4,10}$/;
+		   if(pwdReg.test(pwd)==false){
+			     $("pwd_prompt").innerHTML="密码不合要求";
+				 return false;
+		   }
+		   $("pwd_prompt").innerHTML="";
+		   return true;  
+	  }
+	  function checkRepwd(){
+		  var repwd=$("repwd").value;
+		  var pwd=$("pwd").value;
+		  if(repwd!=pwd){
+			  $("repwd_prompt").innerHTML="密码不一致";
+			  return false;
+		  }
+		  $("repwd_prompt").innerHTML="";
+		  return true;
+	  }
+       function checkEmail(){
+		   var email=document.getElementById("email").value;
+		   var emailReg=/^\w+@\w+\.[(com)$|(cn)$]/;
+		   if(emailReg.test(email)==false){
+			   $("email_prompt").innerHTML="邮箱不合要求";
+			   return false;
+		   }
+		   $("email_prompt").innerHTML="";
+		   return true;
+	   }
+	   function checkMobile(){
+		   var mobile=$("mobile").value;
+		   var mobileReg=/^1\d{10}$/;
+		   if(mobileReg.test(mobile)==false){
+			   $("mobile_prompt").innerHTML="手机号不合要求";
+			   return false;
+		   }
+		   $("mobile_prompt").innerHTML="";
+		   return true;
+	   }
+	   function checkBirth(){
+		   var birth=$("birth").value;
+		   var birthReg=/^((19\d{2})|(20[0-1][0-4]))-((0?[1-9])|(1[0-2]))-((0?[1-9])|([1-2]\d)|(3[0-1]))$/;
+		   if(birthReg.test(birth)==false){
+			   $("birth_prompt").innerHTML="出生日期格式有误";
+			   return false;
+		   }
+		    $("birth_prompt").innerHTML="";
+			return true;
+	   }
+	    function checkAll(){
+		 checkUser();
+		 checkPwd();
+		 checkRepwd();
+		 checkEmail();
+		 checkMobile();
+		 checkBirth();
+		 if(checkUser() && checkPwd() && checkRepwd() && checkEmail() && checkMobile() && checkBirth()){
+			 return true;
+		 }else{
+		 return false;
+		 }
+		}
+		
+        var picarr=new Array();
+		 picarr[0]="images/banner.jpg";
+		 picarr[1]="images/banner2.jpg";
+		 picarr[2]="images/banner3.jpg"
+		  var i=0;
+		 var time;
+		 function show(){
+			 document.getElementById("haha").src=picarr[i];
+			 if(i<picarr.length-1)
+			   i++;
+			 else
+			    i=0;
+		     time=setTimeout("show()",2000)
+		 }
+		 window.onload=show;
+         function login(){
+			window.location.href="http://localhost:8080/web/inputRegisterMess.jsp" ;
+		 }
+</script>
+</head>
+
+<body>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#F6F6F6">
+  <tr>
+    <td><img src="images/logo.jpg"></td>
+  </tr>
+</table>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0" background="images/tb.png" class="cd">
+  <tr id="banner">
+    <td width="10%" height="40" align="center"><a href="index.html">网站首页</a></td>
+    <td width="10%" align="center"><a href="js.html">狗狗介绍</a></td>
+    <td width="10%" align="center"><a href="zp.html">狗狗照片</a></td>
+    <td width="10%" align="center"><a href="zl.html">狗狗种类</a></td>
+    <td width="10%" align="center"><a href="sl.html">狗狗食量</a></td>
+    <td width="10%" align="center"><a href="sy.html">狗狗饲养</a></td>
+    <td width="10%" align="center"><a href="ly.html">加入我们</a></td>
+    <td width="10%" align="center"><a href="javascript:login()">登录/注册</a></td>
+  </tr>
+</table>
+<table width="979" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="979" height="64"><img src="images/banner.jpg" width="980" id="haha"></td>
+  </tr>
+</table>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+</table>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+</table>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="40" class="bt">网站栏目</td>
+    <td height="40" bgcolor="#FFFFFF">&nbsp;</td>
+    <td height="40" class="bt" ></td>
+  </tr>
+  <tr>
+    <td width="250" height="262" valign="top"><table width="250" border="0" cellspacing="0" cellpadding="0" class="lm"></td>
+      <tr>
+        <td height="40"><a href="js.html">狗狗介绍</a></td>
+      </tr>
+    <tr>
+        <td height="40"><a href="zp.html">狗狗照片</a></td>
+      </tr>
+      <tr>
+        <td height="40"><a href="zl.html">狗狗种类</a></td>
+      </tr>
+      <tr>
+        <td height="40"><a href="sy.html">狗狗饲养</a></td>
+      </tr>
+      <tr>
+        <td height="40"><a href="leaveMessage.html">留言板</a></td>
+      </tr>
+      <tr>
+        <td height="40"><a href="listcart.html">购买宠物</a></td>
+      </tr>
+      <tr>
+        <td height="40"><a href="map.html">查看宠物店地图</a></td>
+      </tr>
+      </tr>
+      
+   </table>
+   
+   <td width="715" valign="top">
+  <textarea id="msg" cols="60" rows="10"></textarea>
+        <input id="btn" type="button" value="留言">
+        <div id="msg_c"></div>
+        <input type="button" value="点击此处以统计留言总数" onClick="totalMessage()"/>
+    </td>
+  </tr>
+</table>
+   <script type="text/javascript">
+        var count=0;
+        window.onload = function(){
+            var Msg = document.getElementById("msg");
+            var Btn = document.getElementById("btn");
+            var Msg_c = document.getElementById("msg_c");
+            var Ul = document.createElement("ul"); //定义一个有序的列表
+            Msg_c.appendChild(Ul);                 //向Msg_c中添加UL节点
+            Btn.onclick = function(){              /* 点击留言以后，在Msg_c中添加列表，在列表中添加内容
+                                                      在每一条留言后面添加一个<span>标签 使用此标签的onclick属性
+                                                    */ 
+                var MsgValue = Msg.value;         
+                var Li = document.createElement("li");
+                Li.innerHTML = MsgValue + " <span>删除</span>";
+                var arrayLi = Ul.getElementsByTagName("li")   //判断是否是第一个留言
+                if(arrayLi.length>0){
+                    Ul.insertBefore(Li,arrayLi[0]);
+                    count++;
+                }else{
+                    Ul.appendChild(Li);
+                    count++;
+                }
+                Msg.value='';
+                var Span = document.getElementsByTagName("span");
+                for(var i=0; i<Span.length; i++){
+                    Span[i].onclick = function(){
+                      Ul.removeChild(this.parentNode);
+                      count--;
+                    }
+                }
+            }
+        }
+        function totalMessage(){       //统计留言的数量
+            alert("一共有"+count+"条留言");
+        }
+    </script>   
+      
+   <!--<td>
+   <div class="hehe">
+    
+    <table class="main" border="0" cellspacing="0" cellpadding="0">
+  
+  <tr>
+    <td class="hr_1">新用户注册</td>
+  </tr>
+  <tr>
+    <td style="height:10px;"></td>
+  </tr>
+  <form action="Untitled-1.html" method="post" name="myform"  onsubmit="return checkAll()">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="left">用户名：</td>
+    <td class="center"><input id="user" type="text" class="inputClass" onblur="checkUser()"/></td>
+    <td><div id="user_prompt">用户名由英文字母和数字组成的4-16位字符，以字母开头</div></td>
+  </tr>
+  <tr>
+    <td class="left">密码：</td>
+    <td class="center"><input id="pwd" type="password" class="inputClass" onblur="checkPwd()" /></td>
+    <td><div id="pwd_prompt">密码由4-10位字符组成</div></td>
+  </tr>
+  <tr>
+    <td class="left">确认密码：</td>
+    <td class="center"><input id="repwd" type="password" class="inputClass" onblur="checkRepwd()" /></td>
+    <td><div id="repwd_prompt"></div></td>
+  </tr>
+   <tr>
+    <td class="left">电子邮箱：</td>
+    <td class="center"><input id="email" type="text" class="inputClass" onblur="checkEmail()" /></td>
+    <td><div id="email_prompt"></div></td>
+  </tr>
+    <tr>
+    <td class="left">手机号码：</td>
+    <td class="center"><input id="mobile" type="text" class="inputClass" onblur="checkMobile()"/></td>
+    <td><div id="mobile_prompt"></div></td>
+  </tr>
+  <tr>
+    <td class="left">生日：</td>
+    <td class="center"><input id="birth" type="text" class="inputClass" onblur="checkBirth()"/></td>
+    <td><div id="birth_prompt"></div></td>
+  </tr>
+   <tr>
+    <td class="left">&nbsp;</td>
+    <td class="center"><input  name="" type="image" src="images/register.jpg" /></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  </form>
+</table>
+</div>
+</td>-->
+    
+   
+   
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+</table>
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="67" class="jw"> <p>ALL rights reserved.<br />2001-2018,版权所有 狗狗驿站85CP 备 13385453</p></td>
+  </tr>
+</table>
+        
+</body>
+</html>
