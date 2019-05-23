@@ -479,21 +479,21 @@ body{
 								</label>
 							</span>
 							<span class="input input--hideo">
-								<input class="input__field input__field--hideo" type="password" id="register-password" placeholder="ÇëÊäÈëÃÜÂë" maxlength="15" name="password"/>
-								<label class="input__label input__label--hideo" for="register-password">
-									<i class="fa fa-fw fa-lock icon icon--hideo"></i>
+								<input class="input__field input__field--hideo" type="text" id="register-code" autocomplete="off" placeholder="11111111" name="phone"/>
+								<label class="input__label input__label--hideo" for="register-code">
+									<i class="fa fa-fw fa-wifi icon icon--hideo"></i>
+									<span class="input__label-content input__label-content--hideo"></span>
+								</label>
+							</span>
+                                                           <span class="input input--hideo">
+								<input class="input__field input__field--hideo" type="text" id="register-code" autocomplete="off" value="11111111" name="address"/>
+								<label class="input__label input__label--hideo" for="register-code">
+									<i class="fa fa-fw fa-wifi icon icon--hideo"></i>
 									<span class="input__label-content input__label-content--hideo"></span>
 								</label>
 							</span>
 							<span class="input input--hideo">
-								<input class="input__field input__field--hideo" type="password" id="register-repassword" placeholder="ÇëÈ·ÈÏÃÜÂë" maxlength="15" name="again_password"/>
-								<label class="input__label input__label--hideo" for="register-repassword">
-									<i class="fa fa-fw fa-lock icon icon--hideo"></i>
-									<span class="input__label-content input__label-content--hideo"></span>
-								</label>
-							</span>
-							<span class="input input--hideo">
-								<input class="input__field input__field--hideo" type="text" id="register-code" autocomplete="off" placeholder="ÇëÊäÈëÊÖ»úºÅ" name="phone"/>
+								<input class="input__field input__field--hideo" type="text" id="register-code" autocomplete="off" value="11111111" name="realname"/>
 								<label class="input__label input__label--hideo" for="register-code">
 									<i class="fa fa-fw fa-wifi icon icon--hideo"></i>
 									<span class="input__label-content input__label-content--hideo"></span>
