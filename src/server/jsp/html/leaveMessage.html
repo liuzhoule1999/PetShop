@@ -213,8 +213,8 @@ a:hover{
                 var MsgValue = Msg.value;         
                 var Li = document.createElement("li");
 				var d=new Date();
-                   document.write(d);
-                Li.innerHTML = MsgValue + " <span>删除</span>";
+                   
+                Li.innerHTML = "留言内容："+MsgValue +"<br\>日期:"+ d.toLocaleString+" <span>删除</span>";
                 var arrayLi = Ul.getElementsByTagName("li")   //判断是否是第一个留言
                 if(arrayLi.length>0){
                     Ul.insertBefore(Li,arrayLi[0]);
